@@ -23,7 +23,7 @@ class Movie {
         }
     }
 
-    public function pushActor($_actor) {
+    public function addActors($_actors) {
         $this->actors[] = $_actor;
     }
 

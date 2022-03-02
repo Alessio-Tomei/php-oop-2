@@ -1,15 +1,14 @@
 <?php
 class Show {
-    private $id;
-    private $idHall;
+    private $movie;
+    private $hall;
     private $time;
     private $date;
     private $booking;
 
-
-    public function __construct($_id, $_idHall, $_time, $_date, $_booking) {
-        $this->id = $_id;
-        $this->idHall = $_idHall;
+    public function __construct($_movie, $_hall, $_time, $_date, $_booking) {
+        $this->movie = $_movie;
+        $this->hall = $_hall;
         $this->time = $_time;
         $this->date = $_date;
         $this->booking = $this->initializeReservations($_booking);
@@ -29,6 +28,6 @@ class Show {
     }
 
     public function getInfo() {
-        return [$this->id, $this->idHall, $this->time, $this->date, $this->booking];
+        return [$this->movie, $this->hall, $this->time, $this->date, $this->booking];
     }
 }
